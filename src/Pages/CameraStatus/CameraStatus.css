@@ -1,0 +1,18 @@
+.camerastatus__wrapper {
+  height: 100vh;
+  padding: 4rem 1rem 1rem 1rem;
+  background-color: rgba(65, 105, 225, 0.062);
+}
+.camerastatus__wrapper h1 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #141414;
+}
+
+.camerastatus {
+  height: 90%;
+  width: 100%;
+  margin-top: 1rem;
+  background-color: #fff;
+  border-radius: 2px;
+}

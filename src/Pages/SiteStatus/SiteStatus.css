@@ -1,0 +1,112 @@
+.sitestatus {
+  padding: 3rem 1rem 0 1rem;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 100%;
+  background-color: rgb(235, 238, 243);
+}
+.sitestatus__title {
+  font-size: 1.6rem;
+  color: #141414;
+  font-weight: 600;
+}
+
+.global__search__exportbtn {
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: royalblue;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.global__search__exportbtn__icon {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.global__search {
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.global__search__wrapper {
+  position: relative;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.global__search__input {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+  font-size: 0.9rem;
+  padding-left: 3rem;
+  border: none;
+  background-color: #ffffff;
+}
+.global__search__icon {
+  position: absolute;
+  top: 33%;
+  left: 12%;
+  font-size: 1.3rem;
+  color: rgb(129, 126, 126);
+  z-index: 1;
+}
+
+.sitestatus__table__wrapper {
+  height: 450px;
+  overflow: scroll;
+  width: 100%;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.sitestatus__table {
+  border-collapse: collapse;
+  width: 100%;
+  position: relative;
+}
+
+.sitestatus__table__header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  border: 1px solid #1414143f;
+}
+.sitestatus__table__header th {
+  padding: 8px;
+}
+.sitestatus__table td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #1414143b;
+}
+.sitestatus__table th {
+  background-color: #f2f2f2;
+}
+/* .sitestatus__table tr:nth-child(even) {
+} */
+.sitestatus__table td button {
+  background-color: royalblue;
+  color: #fff;
+  padding: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+}
+
+.custom__tooltip{
+  background-color: red;
+}

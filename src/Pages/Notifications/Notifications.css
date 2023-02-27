@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+.notifications {
+  height: max-content;
+  width: 100%;
+  padding: 4rem;
+  background-color: rgba(65, 105, 225, 0.082);
+}
+.notifications__container {
+  background-color: #fff;
+  padding: 1rem;
+  height: 100%;
+  height: max-content;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.212);
+  border: 1px solid #cfcfcf;
+}
+.notifications__container h1 {
+  color: #141414;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.notifications__tab {
+  color: #141414;
+  font-family: "Poppins", sans-serif;
+}
+
+.notifications__email__card {
+  border: 1px solid rgba(92, 87, 87, 0.329);
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: #8b88880c;
+  width: 80%;
+  margin-bottom: 10px;
+}
+.card__email {
+  padding: 3px;
+  border-radius: 5px;
+  color: #141414;
+  background-color: rgba(255, 0, 0, 0.623);
+}
+
+.notifications__email__card p {
+  margin-top: 10px;
+  font-weight: 500;
+  color: #141414;
+}

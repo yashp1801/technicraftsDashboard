@@ -1,0 +1,57 @@
+.myaccount {
+  padding: 4rem;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(65, 105, 225, 0.055);
+}
+.myaccount__container {
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #cac8c8;
+  height: 100%;
+  width: 100%;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.212);
+  border-radius: 10px;
+}
+
+.myaccount__container h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #141414;
+  margin-bottom: 2rem;
+}
+
+.myaccount__container p {
+  padding-bottom: 5px;
+}
+.myaccount__personalDetails__wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+.myaccount__personalDetails__leftside {
+  flex: 1;
+}
+.myaccount__personalDetails__rightside {
+  flex: 2;
+}
+.myaccount__personalDetails__rightside__submitBtn {
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 500;
+  background-color: royalblue;
+  border: none;
+  border-radius: 4px;
+  margin: 20px 9px;
+  cursor: pointer;
+  border: 1px solid royalblue;
+  transition: 0.1s ease-in;
+}
+.myaccount__personalDetails__rightside__submitBtn:hover {
+  background-color: rgb(37, 72, 175);
+  transition: 0.1s ease-out;
+}

@@ -1,0 +1,73 @@
+.topbar {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  border-bottom: 1px solid #d6d3d3;
+  box-shadow: 0px 2px 5px 0px rgba(5, 5, 5, 0.123);
+}
+.topbar__logo img {
+  height: 30px;
+  user-select: none;
+  pointer-events: none;
+}
+
+.topbar__menuBtn {
+  padding: 5px;
+  font-size: 0.9rem;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  font-weight: 500;
+}
+
+.topbar__menulist {
+  background-color: #fff;
+  padding: 10px;
+  width: 300px;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.116);
+  border-radius: 5px;
+}
+.topbar__menulist__menuItem {
+  background-color: #fff;
+  border: none;
+}
+.topbar__menuLink {
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
+  color: #141414;
+  transition: 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topbar__menuLink__icon {
+  font-size: 1.2rem;
+  color: #141414;
+  transform: translateX(-10px);
+  visibility: hidden;
+  transition: 0.1s ease;
+}
+.topbar__menuLink:hover {
+  background-color: rgba(65, 105, 225, 0.192);
+  transition: 0.2s ease;
+}
+.topbar__menuLink:hover .topbar__menuLink__icon {
+  transform: translateX(0);
+  visibility: visible;
+  transition: 0.2s ease;
+}
+.topbar__myaccount__icon{
+    font-size: 1.6rem;
+    font-weight: 400;
+}
