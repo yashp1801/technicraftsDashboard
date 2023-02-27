@@ -6,8 +6,6 @@ import GenerateReport from "./GenerateReport";
 const CustomReport = () => {
   return (
     <ApiProvider api={generateReportApi}>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni cumque
-      at. Soluta!
       <GenerateReport />
     </ApiProvider>
   );

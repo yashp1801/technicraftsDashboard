@@ -19,22 +19,18 @@ import ExceedanceReport from "./Pages/ExceedanceReport/ExceedanceReport";
 import Parameters from "./Pages/Parameters/Parameters";
 import CustomReport from "./Pages/CustomReports/CustomReport";
 import Topbar from "./scenes/global/Topbar";
+import UserSiteSummary from "./Pages/UserSiteSummary/UserSiteSummary";
 
 function App() {
   const [currentUserType, setCurrentUserType] = useState("user");
 
-
-
   return (
     <div className="app">
       <Router>
-        <Topbar userType = {currentUserType} />
-        
+        <Topbar userType={currentUserType} />
+
         <Routes>
-          <Route
-            path="/"
-            element={<Login onLogin={setCurrentUserType} />}
-          />
+          <Route path="/" element={<Login onLogin={setCurrentUserType} />} />
 
           <Route path="/admin" element={<AdminDashboard />}>
             <Route path="/admin/overallsummary" element={<OverallSummary />} />
@@ -59,8 +55,8 @@ function App() {
             <Route path="/admin/parameters" element={<Parameters />} />
           </Route>
           <Route path="/user" element={<UserDashboard />}>
+            <Route path="/user/usersitesummary" element={<UserSiteSummary />} />
             <Route path="/user/customreport" element={<CustomReport />} />
-            {/* <Route path="/user/mapview" element={<MapView />} /> */}
           </Route>
         </Routes>
       </Router>
