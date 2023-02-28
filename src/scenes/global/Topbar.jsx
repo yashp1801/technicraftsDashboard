@@ -8,7 +8,7 @@ import { BiUserCircle } from "react-icons/bi";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
 const Topbar = (props) => {
-  if (props.userType === "admin") {
+  if (props.currentUserType === "admin") {
     return (
       <div className="topbar">
         <div className="topbar__logo">

@@ -24,6 +24,7 @@ import Loader from "../../scenes/global/Loader";
 import InputLabel from "@mui/material/InputLabel";
 import FilteredCustomReport from "./FilteredCustomReport";
 import ReportBuildLoader from "../../scenes/global/ReportBuildLoader";
+import FilteredReportGraph from "./FilteredReportGraph";
 
 // DropDown Chip Code
 const ITEM_HEIGHT = 48;
@@ -124,7 +125,7 @@ const GenerateReport = () => {
   // Url build for Getting final report
 
   // Calling built url
-  console.log(averageReport)
+  console.log(averageReport);
 
   const filterSiteNames = siteNames.data.filter(
     (item) => item.category === selectedCategory
@@ -239,11 +240,14 @@ const GenerateReport = () => {
         <button onClick={getAverageReportData}>Get Report</button>
       </div>
       {isOpen && (
-        <FilteredCustomReport
-        averageReport={averageReport}
-          setIsOpen={setIsOpen}
-          // siteName={siteName}
-        />
+        <>
+          <FilteredCustomReport
+            averageReport={averageReport}
+            setIsOpen={setIsOpen}
+            // siteName={siteName}
+          />
+          <FilteredReportGraph averageReport={averageReport} />
+        </>
       )}
     </div>
   );
