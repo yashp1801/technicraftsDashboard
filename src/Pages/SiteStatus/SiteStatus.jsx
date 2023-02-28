@@ -38,7 +38,7 @@ const SiteStatus = () => {
   // Site Status data navigation
   const navigate = useNavigate();
   const navigateToSiteStatusData = (id) => {
-    navigate("/sitestatusdata", { state: { id: id } });
+    navigate("/user/sitestatusdata", { state: { id: id } });
   };
 
   // Exporting to Excel

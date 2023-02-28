@@ -86,7 +86,7 @@ const Topbar = (props) => {
             </MenuButton>
             <MenuList className="topbar__menulist">
               <MenuItem className="topbar__menulist__menuItem">
-                <Link to={"/customreport"} className="topbar__menuLink">
+                <Link to={"./customreport"} className="topbar__menuLink">
                   Custom Report
                   <MdKeyboardArrowRight className="topbar__menuLink__icon" />
                 </Link>
@@ -370,7 +370,7 @@ const Topbar = (props) => {
         <div className="topbar__menu">
           <Menu>
             <Link
-              to="/dashboard"
+              to="/user"
               style={{
                 color: "black",
                 textDecoration: "none",
@@ -403,7 +403,7 @@ const Topbar = (props) => {
                 </Link>
               </MenuItem>
               <MenuItem className="topbar__menulist__menuItem">
-                <Link to={"/admin/sitestatus"} className="topbar__menuLink">
+                <Link to={"/user/sitestatus"} className="topbar__menuLink">
                   Site Status
                   <MdKeyboardArrowRight className="topbar__menuLink__icon" />
                 </Link>
@@ -420,7 +420,7 @@ const Topbar = (props) => {
             </MenuButton>
             <MenuList className="topbar__menulist">
               <MenuItem className="topbar__menulist__menuItem">
-                <Link to={"/customreport"} className="topbar__menuLink">
+                <Link to={"/user/customreport"} className="topbar__menuLink">
                   Custom Report
                   <MdKeyboardArrowRight className="topbar__menuLink__icon" />
                 </Link>
@@ -585,7 +585,7 @@ const Topbar = (props) => {
               </MenuItem>
             </MenuList>
           </Menu>
-          <Menu>
+          {/* <Menu>
             <MenuButton
               as={Button}
               rightIcon={<ChevronDownIcon />}
@@ -619,8 +619,8 @@ const Topbar = (props) => {
                 </Link>
               </MenuItem>
             </MenuList>
-          </Menu>
-          <Menu>
+          </Menu> */}
+          {/* <Menu>
             <MenuButton
               as={Button}
               rightIcon={<ChevronDownIcon />}
@@ -654,8 +654,8 @@ const Topbar = (props) => {
                 </Link>
               </MenuItem>
             </MenuList>
-          </Menu>
-          <Menu>
+          </Menu> */}
+          {/* <Menu>
             <Link
               to="/datalogger"
               style={{
@@ -667,7 +667,7 @@ const Topbar = (props) => {
             >
               Datalogger
             </Link>
-          </Menu>
+          </Menu> */}
         </div>
         <div className="topbar__myaccount">
           <Menu>
@@ -676,13 +676,13 @@ const Topbar = (props) => {
             </MenuButton>
             <MenuList className="topbar__menulist">
               <MenuItem className="topbar__menulist__menuItem">
-                <Link to={"/myaccount"} className="topbar__menuLink">
+                <Link to={"/user/myaccount"} className="topbar__menuLink">
                   My Account{" "}
                   <MdKeyboardArrowRight className="topbar__menuLink__icon" />
                 </Link>
               </MenuItem>
               <MenuItem className="topbar__menulist__menuItem">
-                <Link to={"/notifications"} className="topbar__menuLink">
+                <Link to={"/user/notifications"} className="topbar__menuLink">
                   Notifications{" "}
                   <MdKeyboardArrowRight className="topbar__menuLink__icon" />
                 </Link>

@@ -2,13 +2,12 @@
   height: 100%;
   width: 100%;
   padding: 5rem 2rem;
+  position: relative;
 }
-.generatereport__wrapper {
-  width: 100%;
-  background-color: #fff;
-  height: max-content;
-  padding: 1rem;
+.generatereport h1 {
+  font-weight: 500;
 }
+
 .generatereport__header {
   display: flex;
   justify-content: space-between;
@@ -36,6 +35,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 1rem;
+  margin-top: 2rem;
 }
 .generatereport__filter__sitename {
   font-size: 1.7rem;
@@ -50,17 +50,14 @@
   border-radius: 5px;
   box-shadow: 0px 5px 2px 0px rgba(0, 0, 0, 0.219);
 }
-.generatereport__datePicker__wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-}
 .generatereport__datePicker {
   width: 100%;
   padding: 1rem;
 }
+.generatereport__checkbox__wrapper {
+  display: flex;
+}
+
 .generatereport__checkbox__wrapper {
   display: flex;
   justify-content: space-between;
@@ -80,7 +77,21 @@
   padding: 0;
   margin-bottom: 10px;
 }
-
+.generatereport__button {
+  padding: 10px;
+  font-size: 1rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background-color: royalblue;
+  color: #fff;
+  transition: 0.1s all;
+}
+.generatereport__button:hover {
+  background-color: rgb(51, 82, 175);
+}
 .filteredCustomReport {
   background-color: #1414141c;
   height: 100%;
@@ -91,10 +102,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding:5rem 2rem 2rem 2rem;
+  padding: 5rem 2rem 2rem 2rem;
 }
-.filteredCustomReport__container{
+.filteredCustomReport__container {
   background-color: #fff;
   height: 80vh;
   width: 90%;
+}
+.filteredreport__table {
+  margin-top: 5rem;
+  height: 500px;
+  overflow: scroll;
+}
+.filteredreport__typeheader {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+.filteredReport__tabelrow {
+  background-color: rgba(65, 105, 225, 0.678);
+}
+
+.filteredReport__tabelCell {
+  font-weight: 500;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.filteredReport__graph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5rem;
+  text-align: left;
 }

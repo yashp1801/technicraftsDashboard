@@ -107,6 +107,35 @@
   border-radius: 3px;
 }
 
-.custom__tooltip{
-  background-color: red;
+.realtimereport__livereading {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+.realtimereport__livereading__container {
+  overflow: scroll;
+  width: 100%;
+  height: 300px;
+}
+
+.realtimereport__livereading__card {
+  border: 1px solid #afafaf;
+  border-radius: 3px;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+.realtimereport__livereading__card__icon {
+  margin-right: 10px;
+}
+.realtimereport__livereading__card__content p {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.realtimereport__livereading__card__content p span {
+  color: green;
+  font-size: 1.3rem;
 }

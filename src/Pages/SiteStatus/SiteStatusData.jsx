@@ -51,7 +51,6 @@ export default function SiteStatusData() {
                 aria-label="lab API tabs example"
               >
                 <Tab label="Record view" value="1" />
-
                 <Tab label="Real Time Report" value="2" />
                 <Tab label="Live Readings" value="3" />
               </TabList>
@@ -68,7 +67,7 @@ export default function SiteStatusData() {
             {/* Tab 3 */}
 
             <TabPanel value="3">
-              <SiteLiveReadings data = {data}/>
+              <SiteLiveReadings data={data} />
             </TabPanel>
           </TabContext>
         </Box>

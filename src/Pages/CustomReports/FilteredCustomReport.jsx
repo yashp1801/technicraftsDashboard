@@ -25,42 +25,49 @@ const FilteredCustomReport = ({ averageReport }) => {
   const hasFlowData = averageReport.hasOwnProperty("flow");
 
   return (
-    <TableContainer component={Paper}>
-      <Table className={classes.table} aria-label="customized table">
-        <TableHead>
-          <TableRow>
-            <TableCell>Date/Time</TableCell>
-            {hasCODData && <TableCell>COD Value</TableCell>}
-            {hasBODData && <TableCell>BOD Value</TableCell>}
-            {hasTSSData && <TableCell>TSS Value</TableCell>}
-            {hasPhData && <TableCell>Ph Value</TableCell>}
-            {hasFlowData && <TableCell>Flow Value</TableCell>}
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {Object.entries(averageReport.COD).map(([datetime, codValue]) => (
-            <TableRow key={datetime}>
-              <TableCell component="th" scope="row">
-                {datetime}
+    <div className="filteredreport__table">
+      <h2 className="filteredreport__typeheader">Report Table view</h2>
+      <TableContainer component={Paper}>
+        <Table className={classes.table} aria-label="customized table">
+          <TableHead>
+            <TableRow className="filteredReport__tabelrow">
+              <TableCell className="filteredReport__tabelCell">
+                Date/Time
               </TableCell>
-              {hasBODData && (
-                <TableCell>{averageReport.BOD[datetime] || "-"}</TableCell>
-              )}
-              {hasCODData && (
-                <TableCell>{averageReport.COD[datetime]}</TableCell>
-              )}
-              {hasTSSData && (
-                <TableCell>{averageReport.TSS[datetime]}</TableCell>
-              )}
-              {hasPhData && <TableCell>{averageReport.pH[datetime]}</TableCell>}
-              {hasFlowData && (
-                <TableCell>{averageReport.flow[datetime]}</TableCell>
-              )}
+              {hasCODData && <TableCell>COD Value</TableCell>}
+              {hasBODData && <TableCell>BOD Value</TableCell>}
+              {hasTSSData && <TableCell>TSS Value</TableCell>}
+              {hasPhData && <TableCell>Ph Value</TableCell>}
+              {hasFlowData && <TableCell>Flow Value</TableCell>}
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
+          </TableHead>
+          <TableBody>
+            {Object.entries(averageReport.COD).map(([datetime, codValue]) => (
+              <TableRow key={datetime}>
+                <TableCell component="th" scope="row">
+                  {datetime}
+                </TableCell>
+                {hasBODData && (
+                  <TableCell>{averageReport.BOD[datetime] || "-"}</TableCell>
+                )}
+                {hasCODData && (
+                  <TableCell>{averageReport.COD[datetime]}</TableCell>
+                )}
+                {hasTSSData && (
+                  <TableCell>{averageReport.TSS[datetime]}</TableCell>
+                )}
+                {hasPhData && (
+                  <TableCell>{averageReport.pH[datetime]}</TableCell>
+                )}
+                {hasFlowData && (
+                  <TableCell>{averageReport.flow[datetime]}</TableCell>
+                )}
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </div>
   );
 };
 

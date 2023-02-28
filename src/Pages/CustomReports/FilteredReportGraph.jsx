@@ -8,6 +8,7 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
+import "./CustomReport.css";
 
 const FilteredReportGraph = ({ averageReport }) => {
   const hasBODData = averageReport.hasOwnProperty("BOD");
@@ -27,33 +28,36 @@ const FilteredReportGraph = ({ averageReport }) => {
   });
 
   return (
-    <LineChart
-      width={800}
-      height={400}
-      data={data}
-      margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-    >
-      <XAxis dataKey="datetime" />
-      <YAxis />
-      <CartesianGrid strokeDasharray="3 3" />
-      <Tooltip />
-      <Legend />
-      {hasBODData && (
-        <Line type="monotone" dataKey="BOD" stroke="#8884d8" dot={true} />
-      )}
-      {hasCODData && (
-        <Line type="monotone" dataKey="COD" stroke="#82ca9d" dot={true} />
-      )}
-      {hasTSSData && (
-        <Line type="monotone" dataKey="TSS" stroke="#ffc658" dot={true} />
-      )}
-      {hasPhData && (
-        <Line type="monotone" dataKey="Ph" stroke="#8884d8" dot={true} />
-      )}
-      {hasFlowData && (
-        <Line type="monotone" dataKey="Flow" stroke="#82ca9d" dot={true} />
-      )}
-    </LineChart>
+    <div className="filteredReport__graph">
+      <h2 className="filteredreport__typeheader">Report Graph View</h2>
+      <LineChart
+        width={1000}
+        height={400}
+        data={data}
+        margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+      >
+        <XAxis dataKey="datetime" />
+        <YAxis />
+        <CartesianGrid strokeDasharray="3 3" />
+        <Tooltip />
+        <Legend />
+        {hasBODData && (
+          <Line type="monotone" dataKey="BOD" stroke="#FFFF00" dot={true} />
+        )}
+        {hasCODData && (
+          <Line type="monotone" dataKey="COD" stroke="#FF0000" dot={true} /> // red
+        )}
+        {hasTSSData && (
+          <Line type="monotone" dataKey="TSS" stroke="#0000FF" dot={true} /> // blue
+        )}
+        {hasPhData && (
+          <Line type="monotone" dataKey="Ph" stroke="#008000" dot={true} />
+        )}
+        {hasFlowData && (
+          <Line type="monotone" dataKey="Flow" stroke="#82ca9d" dot={true} />
+        )}
+      </LineChart>
+    </div>
   );
 };
 

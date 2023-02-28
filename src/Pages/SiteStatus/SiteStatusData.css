@@ -1,6 +1,7 @@
 .sitestatusdata {
   padding: 5rem 1rem 0 1rem;
   background-color: rgba(65, 105, 225, 0.11);
+  height: 100%;
 }
 .sitestatusdata__header__content {
   background-color: #fff;
@@ -30,6 +31,8 @@
   border-radius: 1rem;
   padding: 10px;
   margin-top: 10px;
+  height: 420px;
+  overflow: scroll;
 }
 
 .sitestatusdatalocation__type__btn {

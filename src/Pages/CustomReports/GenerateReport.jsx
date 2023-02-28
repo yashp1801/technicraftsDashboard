@@ -15,7 +15,6 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Chip from "@mui/material/Chip";
 import { DatePicker } from "antd";
-import Checkbox from "@mui/material/Checkbox";
 import Button from "@mui/material/Button";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import { useEffect, useState } from "react";
@@ -25,6 +24,7 @@ import InputLabel from "@mui/material/InputLabel";
 import FilteredCustomReport from "./FilteredCustomReport";
 import ReportBuildLoader from "../../scenes/global/ReportBuildLoader";
 import FilteredReportGraph from "./FilteredReportGraph";
+import Checkbox from "@mui/material/Checkbox";
 
 // DropDown Chip Code
 const ITEM_HEIGHT = 48;
@@ -62,6 +62,7 @@ const GenerateReport = () => {
   const [endDate, setEndDate] = useState();
   const [averageReport, setAverageReport] = useState();
   const [loading, setLoading] = useState();
+  const [isSelected, setIsSelected] = useState(false);
 
   const categoryData = useGenerateReportDataQuery();
   const siteNames = useSiteNameQuery();
@@ -95,6 +96,12 @@ const GenerateReport = () => {
     setStartDate(dateStrings[0]);
     setEndDate(dateStrings[1]);
   };
+
+  const handleCheckBox = () => {
+    setIsSelected((current) => !current);
+  };
+
+  console.log(isSelected);
 
   const getAverageReportData = () => {
     const headers = {
@@ -132,6 +139,7 @@ const GenerateReport = () => {
   );
   return (
     <div className="generatereport">
+      <h1>Generate Custom Report</h1>
       <div className="generatereport__filter__wrapper">
         <FormControl className="generatereport__filter">
           <label>Select Category</label>
@@ -233,11 +241,23 @@ const GenerateReport = () => {
             <MenuItem value={45}>45 Minutes</MenuItem>
           </Select>
         </FormControl>
-        <RangePicker
-          className="generatereport__datePicker"
-          onChange={onDateChange}
-        />
-        <button onClick={getAverageReportData}>Get Report</button>
+        <div>
+          <label>Select Date</label>
+          <RangePicker
+            className="generatereport__datePicker"
+            onChange={onDateChange}
+          />
+        </div>
+        <button
+          className="generatereport__button"
+          onClick={getAverageReportData}
+        >
+          Get Report
+        </button>
+        <div className="generatereport__checkbox__wrapper"> 
+          <label>Get Graph View</label>
+          <Checkbox onChange={handleCheckBox} />
+        </div>
       </div>
       {isOpen && (
         <>
@@ -246,7 +266,9 @@ const GenerateReport = () => {
             setIsOpen={setIsOpen}
             // siteName={siteName}
           />
-          <FilteredReportGraph averageReport={averageReport} />
+          {isSelected === true ? (
+            <FilteredReportGraph averageReport={averageReport} />
+          ) : null}
         </>
       )}
     </div>
