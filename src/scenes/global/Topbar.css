@@ -24,7 +24,7 @@
   background-color: #fff;
   border: none;
   cursor: pointer;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
   font-weight: 500;
 }
 
@@ -38,6 +38,9 @@
 .topbar__menulist__menuItem {
   background-color: #fff;
   border: none;
+}
+.topbar__menu{
+  width: max-content;
 }
 .topbar__menuLink {
   text-decoration: none;
@@ -68,7 +71,23 @@
   transition: 0.2s ease;
 }
 
-.topbar__myaccount__icon{
-    font-size: 1.6rem;
-    font-weight: 400;
+.topbar__myaccount__icon {
+  font-size: 1.6rem;
+  position: relative;
+  font-weight: 100;
+}
+
+.topbar__myaccount__icon__notificationAlert {
+  position: absolute;
+  bottom: 0;
+  right: -20%;
+  font-size: 2rem;
+  color: royalblue;
+}
+.topbar__menulist__menuItem__notificationAlert {
+  color: royalblue;
+  position: absolute;
+  top: 0;
+  left: 34%;
+  font-size: 1.8rem;
 }

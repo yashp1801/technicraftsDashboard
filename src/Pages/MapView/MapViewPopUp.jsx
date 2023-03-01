@@ -4,6 +4,8 @@ import "./MapViewPopUp.css";
 import { CgCloseO } from "react-icons/cg";
 import { HiLocationMarker } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
+import SiteStatusDataTable from "../../Components/SiteStatusDataTable";
 
 const columns = [
   { field: "id", headerName: "ID", width: 90 },
@@ -68,24 +70,20 @@ export default function MapViewPopUp(props) {
             <CgCloseO onClick={closePopup} className="mapviewpopup__closebtn" />
           </button>
           <div className="mapviewpopup__content__header">
-            <h1>Site Name will appear here {props.selectedMarker} </h1>
-            <div className="mapviewpopup__content__header__location">
-              <HiLocationMarker />
-              <span>Mumbai , Maharashtra</span>
+            <div>
+              <h1>BASF India PVT LTD </h1>
+
+              <div className="mapviewpopup__content__header__location">
+                <HiLocationMarker />
+                <span>Navi Mumbai , Maharashtra</span>
+              </div>
             </div>
+            {/* <Link to="/user/sitestatusdata" style={{ color: "#141414" }}>
+              View Details
+            </Link> */}
           </div>
           <div className="mapviewpopup__data__wrapper">
-            <DataGrid
-              rows={rows}
-              columns={columns}
-              pageSize={5}
-              rowsPerPageOptions={[5]}
-              components={{
-                Toolbar: GridToolbar,
-              }}
-              experimentalFeatures={{ newEditingApi: true }}
-              className="mapviewpopup__datatable"
-            />
+            <SiteStatusDataTable />
           </div>
         </motion.div>
       </AnimatePresence>

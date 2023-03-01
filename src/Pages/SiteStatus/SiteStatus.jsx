@@ -1,108 +1,59 @@
-import React, { useState, useEffect } from "react";
-import "./SiteStatus.css";
-import { BiSearchAlt } from "react-icons/bi";
+import * as React from "react";
+import { DataGrid } from "@mui/x-data-grid";
 import { useNavigate } from "react-router-dom";
-import * as XLSX from "xlsx";
-import { SiMicrosoftexcel } from "react-icons/si";
-import Tooltip from "@mui/material/Tooltip";
 
-const SiteStatus = () => {
-  // States
-  const [globalFilter, setGlobalFilter] = useState("");
-  const [data, setData] = useState([]);
-  const [filteredData, setFilteredData] = useState([]);
+// Site Status data navigation
 
-  // Data fetching
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((response) => response.json())
-      .then((data) => {
-        setData(data);
-        setFilteredData(data);
-      });
-  }, []);
-
-  // Search
-  const handleSearch = (e) => {
-    const searchValue = e.target.value.toLowerCase();
-    setGlobalFilter(searchValue);
-    setFilteredData(
-      data.filter(
-        (item) =>
-          item.name.toLowerCase().includes(searchValue) ||
-          item.email.toLowerCase().includes(searchValue)
-      )
-    );
-  };
-
-  // Site Status data navigation
+export default function SimpleTable() {
   const navigate = useNavigate();
   const navigateToSiteStatusData = (id) => {
     navigate("/user/sitestatusdata", { state: { id: id } });
   };
 
-  // Exporting to Excel
-  const exportToExcel = () => {
-    const ws = XLSX.utils.json_to_sheet(data);
-    const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
-    XLSX.writeFile(wb, "data.xlsx");
-  };
+  const columns = [
+    { field: "id", headerName: "Id", width: 10 },
+    {
+      field: "action",
+      headerName: "Action",
+      width: 100,
+      renderCell: (params) => (
+        <button onClick={(e) => navigateToSiteStatusData(params.row.id)}>
+          View Details
+        </button>
+      ),
+    },
+    { field: "siteName", headerName: "Site Name", width: 250 },
+    { field: "address", headerName: "Address", width: 250 },
+    {
+      field: "connectedparameters",
+      headerName: "Connected Parameters",
+      width: 200,
+    },
+    { field: "industryType", headerName: "Industry Type", width: 150 },
+    { field: "sitestatus", headerName: "Site Status", width: 100 },
+    { field: "exceedance", headerName: "Exceedance", width: 150 },
+  ];
+  const rows = [
+    {
+      id: 1,
+      siteName: "BASF India PVT LTD",
+      address: "Turbhe , Navi Mumbai , Maharashtra",
+      connectedparameters: "COD , BOD , TSS , ph , FLOW",
+      industryType: "Checimal",
+      sitestatus: "Active",
+      exceedance: "No Exceedance",
+    },
+  ];
 
   return (
     <div className="sitestatus">
-      <div className="global__search">
-        <div className="">
-          <h1 className="sitestatus__title">Live Industry Status</h1>
-        </div>
-        <div className="global__search__wrapper">
-          <Tooltip title="Export to Excel">
-            <button
-              onClick={exportToExcel}
-              className="global__search__exportbtn"
-            >
-              <SiMicrosoftexcel className="global__search__exportbtn__icon" />
-            </button>
-          </Tooltip>
-          <BiSearchAlt className="global__search__icon" />
-          <input
-            type="text"
-            placeholder="Search by Category , Exceedance Status , etc"
-            onChange={handleSearch}
-            className="global__search__input"
-          />
-        </div>
-      </div>
-      <div className="sitestatus__table__wrapper">
-        <table className="sitestatus__table">
-          <thead className="sitestatus__table__header">
-            <tr>
-              <th>Sr.No</th>
-              <th>Action</th>
-              <th>Site Name</th>
-              <th>Address</th>
-              <th>Connected Parameters</th>
-              <th>Connected Parameters</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredData.map((item, index) => (
-              <tr key={index}>
-                <td className="centered__content__rows">{item.id}</td>
-                <td className="centered__content__rows">
-                  <button onClick={(e) => navigateToSiteStatusData(item.id)}>
-                    View Details
-                  </button>
-                </td>
-                <td>{item.name}</td>
-                <td>{item.email}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <h1>User Site Status</h1>
+      <div
+        style={{ height: 200, width: "100%" }}
+        className="sitestatus__tablewrapper"
+      >
+        <DataGrid rows={rows} columns={columns} pageSize={1}  />
       </div>
     </div>
   );
-};
-
-export default SiteStatus;
+}

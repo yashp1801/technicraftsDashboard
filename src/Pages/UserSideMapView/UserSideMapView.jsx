@@ -15,8 +15,8 @@ const center = { lat: 20.5937, lng: 78.9629 };
 const data = [
   {
     id: 1,
-    lat: 19.076,
-    lng: 72.8777,
+    lat: 19.0330,
+    lng: 73.0297,
   },
 ];
 

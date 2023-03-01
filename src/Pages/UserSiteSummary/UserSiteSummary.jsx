@@ -14,7 +14,7 @@ import UserSiteSummaryGraph from "./UserSiteSummaryGraph";
 const UserSiteSummary = () => {
   return (
     <div className="usersitesummary">
-      <h1>User123</h1>
+      <h1>BASF India PVT LTD</h1>
       <div className="usersitesummary__wrapper">
         <div className="usersitesummary__leftside">
           <div className="usersitedata__header">
@@ -56,7 +56,7 @@ const UserSiteSummary = () => {
               </p>
               <p>
                 <BiCurrentLocation className="usersitedata__header__card__icon" />{" "}
-                Mumbai , Maharashtra
+                Navi Mumbai , Maharashtra
               </p>
               <p>
                 <BiCategory className="usersitedata__header__card__icon" />{" "}
@@ -80,28 +80,28 @@ const UserSiteSummary = () => {
           <input type="text" placeholder="Search by Parameter" />
           <div className="usersitesummary__rightside__card">
             <p>ETP BOD</p>
-            <span>27.55 mg/l</span>
-            <p>Standard - 100 mg/l</p>
+            <span>14.67 mg/l</span>
+            <p>Standard - 1000 mg/l</p>
           </div>
           <div className="usersitesummary__rightside__card">
-            <p>ETP BOD</p>
-            <span>27.55 mg/l</span>
-            <p>Standard - 100 mg/l</p>
+            <p>ETP TSS</p>
+            <span>12.67 mg/l</span>
+            <p>Standard - 1000 mg/l</p>
           </div>
           <div className="usersitesummary__rightside__card">
-            <p>ETP BOD</p>
-            <span>27.55 mg/l</span>
-            <p>Standard - 100 mg/l</p>
+            <p>ETP COD</p>
+            <span>19.90 mg/l</span>
+            <p>Standard - 1000 mg/l</p>
           </div>
           <div className="usersitesummary__rightside__card">
-            <p>ETP BOD</p>
-            <span>27.55 mg/l</span>
-            <p>Standard - 100 mg/l</p>
+            <p>ETP pH</p>
+            <span>6.67.55 pH</span>
+            <p>Standard - 14 pH</p>
           </div>
           <div className="usersitesummary__rightside__card">
-            <p>ETP BOD</p>
-            <span>27.55 mg/l</span>
-            <p>Standard - 100 mg/l</p>
+            <p>ETP Flow</p>
+            <span>14.67 m3/hr</span>
+            <p>Standard - 1000 m3/hr</p>
           </div>
         </div>
       </div>

@@ -31,52 +31,52 @@ export default function Notifications() {
             </Box>
             <TabPanel value="1" className="notifications__tabpanel">
               <div className="notifications__email__card">
-                <span className="card__email">test@technicrafts.com</span>
-                <p>this is subject</p>
+                <span className="card__email">teamTC@technicrafts.com</span>
+                <p>Subject</p>
                 <p>
                   This is main content Lorem ipsum dolor sit amet consectetur
                   adipisicing elit. Voluptas debitis, quae mollitia id molestiae
                   recusandae, animi aliquam, illo exercitationem doloremque
                   laborum sit a. In velit perferendis nihil minus itaque amet?
                 </p>
-                <p style={{color : "#8b8888"}}>23 Dec, 2022 at 12:43</p>
+                <p style={{ color: "#8b8888" }}>23 Dec, 2022 at 12:43</p>
               </div>
               <div className="notifications__email__card">
-                <span className="card__email">test@technicrafts.com</span>
-                <p>this is subject</p>
+                <span className="card__email">teamTC@technicrafts.com</span>
+                <p>Subject</p>
                 <p>
                   This is main content Lorem ipsum dolor sit amet consectetur
                   adipisicing elit. Voluptas debitis, quae mollitia id molestiae
                   recusandae, animi aliquam, illo exercitationem doloremque
                   laborum sit a. In velit perferendis nihil minus itaque amet?
                 </p>
-                <p style={{color : "#8b8888"}}>23 Dec, 2022 at 12:43</p>
+                <p style={{ color: "#8b8888" }}>23 Dec, 2022 at 12:43</p>
               </div>
               <div className="notifications__email__card">
-                <span className="card__email">test@technicrafts.com</span>
-                <p>this is subject</p>
+                <span className="card__email">teamTC@technicrafts.com</span>
+                <p>Subject</p>
                 <p>
                   This is main content Lorem ipsum dolor sit amet consectetur
                   adipisicing elit. Voluptas debitis, quae mollitia id molestiae
                   recusandae, animi aliquam, illo exercitationem doloremque
                   laborum sit a. In velit perferendis nihil minus itaque amet?
                 </p>
-                <p style={{color : "#8b8888"}}>23 Dec, 2022 at 12:43</p>
+                <p style={{ color: "#8b8888" }}>23 Dec, 2022 at 12:43</p>
               </div>
               <div className="notifications__email__card">
-                <span className="card__email">test@technicrafts.com</span>
-                <p>this is subject</p>
+                <span className="card__email">teamTC@technicrafts.com</span>
+                <p>Subject</p>
                 <p>
                   This is main content Lorem ipsum dolor sit amet consectetur
                   adipisicing elit. Voluptas debitis, quae mollitia id molestiae
                   recusandae, animi aliquam, illo exercitationem doloremque
                   laborum sit a. In velit perferendis nihil minus itaque amet?
                 </p>
-                <p style={{color : "#8b8888"}}>23 Dec, 2022 at 12:43</p>
+                <p style={{ color: "#8b8888" }}>23 Dec, 2022 at 12:43</p>
               </div>
             </TabPanel>
             <TabPanel value="2" className="notifications__tabpanel">
-              SMS list will be displayed here
+              No SMS
             </TabPanel>
           </TabContext>
         </Box>

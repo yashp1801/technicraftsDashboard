@@ -34,8 +34,11 @@
   align-items: flex-start;
 }
 .notificationpopup__wrapper p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-left: 10px;
+  font-weight: 600;
+  color: #141414;
+
 }
 .notificationpopup__link__wrapper {
   text-align: end;

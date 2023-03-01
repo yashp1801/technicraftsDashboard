@@ -28,29 +28,28 @@ const MyAccount = () => {
                 <TextField
                   id="outlined-error"
                   label="Username"
-                  defaultValue="Hello World"
+                  defaultValue="BASF India PVT LTD"
                   required
                 />
                 <TextField
                   id="outlined-error-helper-text"
                   label="Display Name"
-                  defaultValue="Hello World"
-                />
-              </div>{" "}
-              <div>
-                <TextField
-                  id="outlined-error-helper-text"
-                  label="Contact Number"
-                  type="number"
-                  helperText="Please Enter Valid Number"
+                  defaultValue="BASF India PVT LTD"
                 />
               </div>
               <div>
                 <TextField
                   id="outlined-error-helper-text"
-                  label="Display Name"
-                  defaultValue="Hello World"
-                  helperText="Incorrect entry."
+                  label="Contact Number"
+                  type="number"
+                  defaultValue="9283993629"
+                />
+              </div>
+              <div>
+                <TextField
+                  id="outlined-error-helper-text"
+                  label="Email"
+                  defaultValue="teamtc@technicrafts.com"
                 />
               </div>
               <input

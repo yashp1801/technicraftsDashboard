@@ -37,7 +37,10 @@ const Login = (props) => {
             value={pwd}
             onChange={(e) => setPwd(e.target.value)}
           />
-          <Link to={props.currentUserType === "admin" ? "/admin" : "/user"}>
+          <Link
+            to={props.currentUserType === "admin" ? "/admin" : "/user"}
+            className="loginBtn"
+          >
             Continue
           </Link>
         </form>

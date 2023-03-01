@@ -34,10 +34,10 @@ export default function SiteStatusData() {
   return (
     <div className="sitestatusdata">
       <div className="sitestatusdata__header__content">
-        <h1 className="sitestatusdata__headingtitle">{data.name}</h1>
+        <h1 className="sitestatusdata__headingtitle">BASF India PVT LTD</h1>
         <div className="sitestatusdatalocation__type">
           <BiCurrentLocation className="sitestatusdatalocation__type__icon" />
-          <p>Mumbai , Maharashtra</p>
+          <p>Navi Mumbai , Maharashtra</p>
           <TbBuildingFactory2 className="sitestatusdatalocation__type__icon" />
           <p>Chemical</p>
         </div>

@@ -3,17 +3,13 @@
 .notifications {
   height: max-content;
   width: 100%;
-  padding: 4rem;
-  background-color: rgba(65, 105, 225, 0.082);
+  padding: 5rem 2rem 2rem 2rem;
 }
 .notifications__container {
   background-color: #fff;
   padding: 1rem;
   height: 100%;
   height: max-content;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.212);
-  border: 1px solid #cfcfcf;
 }
 .notifications__container h1 {
   color: #141414;
@@ -35,10 +31,11 @@
   margin-bottom: 10px;
 }
 .card__email {
-  padding: 3px;
-  border-radius: 5px;
+  padding: 5px;
+  border-radius: 3px;
   color: #141414;
-  background-color: rgba(255, 0, 0, 0.623);
+  font-weight: 500;
+  background-color: rgba(255, 0, 0, 0.445);
 }
 
 .notifications__email__card p {

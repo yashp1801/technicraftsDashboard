@@ -4,12 +4,12 @@ import UserDashboard from "./dashboard/UserDashboard";
 import { useState } from "react";
 import Login from "./Login/Login";
 import Topbar from "./scenes/global/Topbar";
-import CustomReport from "./Pages/CustomReports/CustomReport";
 import SiteStatus from "./Pages/SiteStatus/SiteStatus";
 import SiteStatusData from "./Pages/SiteStatus/SiteStatusData";
 import MyAccount from "./Pages/MyAccount/MyAccount";
 import Notifications from "./Pages/Notifications/Notifications";
-import UserSideMapView from "./Pages/UserSideMapView/UserSideMapView"
+import UserSideMapView from "./Pages/UserSideMapView/UserSideMapView";
+import CustomReport from "./Pages/CustomReports/CustomReport";
 
 function App() {
   const [currentUserType, setCurrentUserType] = useState("user");
@@ -32,12 +32,12 @@ function App() {
           path="/user"
           element={currentUserType === "user" ? <UserDashboard /> : <Login />}
         />
-        <Route path="/user/customreport" element={<CustomReport />} />
         <Route path="/user/sitestatus" element={<SiteStatus />} />
         <Route path="/user/sitestatusdata" element={<SiteStatusData />} />
         <Route path="/user/myaccount" element={<MyAccount />} />
         <Route path="/user/notifications" element={<Notifications />} />
         <Route path="/user/mapview" element={<UserSideMapView />} />
+        <Route path="/user/customreport" element={<CustomReport />} />
         {/* <Route path="" element={<CustomReport />} /> */}
       </Routes>
     </div>

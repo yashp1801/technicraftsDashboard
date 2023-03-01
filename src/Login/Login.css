@@ -88,16 +88,16 @@
   font-weight: 500;
   background-color: rgb(244, 245, 250);
 }
-.login__form button {
-  padding: 1rem;
+.loginBtn {
+  padding: 10px;
+  color: #fff;
   font-size: 1rem;
   background-color: royalblue;
-  color: #141414;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  border: 2px solid royalblue;
   transition: 0.2s ease-in;
+  text-align: center;
 }
 .login__form button:hover {
   background-color: rgba(65, 105, 225, 0.144);
@@ -105,7 +105,7 @@
 }
 .login__container a {
   font-size: 0.9rem;
-  color: #141414;
+  /* color: #141414; */
   text-decoration: none;
   font-weight: 500;
 }
