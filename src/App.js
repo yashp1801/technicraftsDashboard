@@ -9,6 +9,7 @@ import SiteStatus from "./Pages/SiteStatus/SiteStatus";
 import SiteStatusData from "./Pages/SiteStatus/SiteStatusData";
 import MyAccount from "./Pages/MyAccount/MyAccount";
 import Notifications from "./Pages/Notifications/Notifications";
+import UserSideMapView from "./Pages/UserSideMapView/UserSideMapView"
 
 function App() {
   const [currentUserType, setCurrentUserType] = useState("user");
@@ -36,6 +37,7 @@ function App() {
         <Route path="/user/sitestatusdata" element={<SiteStatusData />} />
         <Route path="/user/myaccount" element={<MyAccount />} />
         <Route path="/user/notifications" element={<Notifications />} />
+        <Route path="/user/mapview" element={<UserSideMapView />} />
         {/* <Route path="" element={<CustomReport />} /> */}
       </Routes>
     </div>

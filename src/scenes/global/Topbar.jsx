@@ -6,8 +6,23 @@ import { Link } from "react-router-dom";
 import Logo from "../../Images/logo.png";
 import { BiUserCircle } from "react-icons/bi";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import NotificationPopup from "./NotificationPopup";
+import { useState, useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
+import { RxDotFilled } from "react-icons/rx";
 
 const Topbar = (props) => {
+  const [notificationPopup, setNotificationPopup] = useState(true);
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setNotificationPopup(false);
+    }, 10000); // 10 seconds
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, []);
+
   if (props.currentUserType === "admin") {
     return (
       <div className="topbar">
@@ -391,13 +406,13 @@ const Topbar = (props) => {
             </MenuButton>
             <MenuList className="topbar__menulist">
               <MenuItem className="topbar__menulist__menuItem">
-                <Link to={"/admin/camerastatus"} className="topbar__menuLink">
+                {/* <Link to={"/admin/camerastatus"} className="topbar__menuLink">
                   Camera Status
                   <MdKeyboardArrowRight className="topbar__menuLink__icon" />
-                </Link>
+                </Link> */}
               </MenuItem>
               <MenuItem className="topbar__menulist__menuItem">
-                <Link to={"/admin/mapview"} className="topbar__menuLink">
+                <Link to={"/user/mapview"} className="topbar__menuLink">
                   Map View
                   <MdKeyboardArrowRight className="topbar__menuLink__icon" />
                 </Link>
@@ -425,8 +440,8 @@ const Topbar = (props) => {
                   <MdKeyboardArrowRight className="topbar__menuLink__icon" />
                 </Link>
               </MenuItem>
-              <MenuItem className="topbar__menulist__menuItem">
-                <Link to={"/exceedancereport"} className="topbar__menuLink">
+              {/* <MenuItem className="topbar__menulist__menuItem">
+                <Link to={"/exceedancereport"} className="topbar__menuLink"  style = {{pointerEvents : "none"}}>
                   Exceedance Report
                   <MdKeyboardArrowRight className="topbar__menuLink__icon" />
                 </Link>
@@ -442,7 +457,7 @@ const Topbar = (props) => {
                   Download{" "}
                   <MdKeyboardArrowRight className="topbar__menuLink__icon" />
                 </Link>
-              </MenuItem>
+              </MenuItem> */}
             </MenuList>
           </Menu>
           <Menu>
@@ -673,6 +688,7 @@ const Topbar = (props) => {
           <Menu>
             <MenuButton as={Button} className="topbar__menuBtn">
               <BiUserCircle className="topbar__myaccount__icon" />
+              {notificationPopup ? <RxDotFilled /> : null}
             </MenuButton>
             <MenuList className="topbar__menulist">
               <MenuItem className="topbar__menulist__menuItem">
@@ -689,6 +705,12 @@ const Topbar = (props) => {
               </MenuItem>
             </MenuList>
           </Menu>
+
+          <AnimatePresence>
+            {notificationPopup && (
+              <NotificationPopup setNotificationPopup={setNotificationPopup} />
+            )}
+          </AnimatePresence>
         </div>
       </div>
     );
