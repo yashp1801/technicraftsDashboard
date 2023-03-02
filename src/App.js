@@ -12,7 +12,7 @@ import UserSideMapView from "./Pages/UserSideMapView/UserSideMapView";
 import CustomReport from "./Pages/CustomReports/CustomReport";
 
 function App() {
-  const [currentUserType, setCurrentUserType] = useState("user");
+  const [currentUserType, setCurrentUserType] = useState("admin");
   const location = useLocation();
 
   //
@@ -39,6 +39,7 @@ function App() {
         <Route path="/user/mapview" element={<UserSideMapView />} />
         <Route path="/user/customreport" element={<CustomReport />} />
         {/* <Route path="" element={<CustomReport />} /> */}
+        <Route />
       </Routes>
     </div>
   );

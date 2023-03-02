@@ -13,6 +13,7 @@ import Loader from "../../scenes/global/Loader";
 const center = { lat: 20.5937, lng: 78.9629 };
 
 const data = [
+  
   {
     id: 1,
     lat: 19.0330,

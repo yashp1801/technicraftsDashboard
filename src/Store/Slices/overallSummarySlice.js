@@ -35,5 +35,8 @@ export const overallSummaryApi = createApi({
   }),
 });
 
-export const { useGetStateWiseCountQuery, useGetTotalStationsQuery , useGetTotalParametersQuery } =
-  overallSummaryApi;
+export const {
+  useGetStateWiseCountQuery,
+  useGetTotalStationsQuery,
+  useGetTotalParametersQuery,
+} = overallSummaryApi;
